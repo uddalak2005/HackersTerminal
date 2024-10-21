@@ -7,3 +7,16 @@ module.exports = {
   plugins: [],
 }
 
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        'space-mono': ['"Space Mono"', 'monospace'],
+      },
+    },
+  },
+  variants: {},
+  plugins: [],
+}
+
