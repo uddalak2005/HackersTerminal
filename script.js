@@ -34,19 +34,24 @@ function dots() {
 yesButton.addEventListener('click', async () => {
     buttonArea.style.display = "none";
     consoleScreen.classList.add("bg-slate-950");
-    await printContent("Initialising Hacking",1000);
-    await dots();
-    consoleScreen.innerHTML += '<br>'; 
-    await printContent("Reading your files",1000);
-    await dots();
-    consoleScreen.innerHTML += '<br>';
-    await printContent("Password of files Detected",1500);
-    await dots();
-    consoleScreen.innerHTML += '<br>';
-    await printContent("Sending all passwords and personal files to server",1500);
-    await dots();
-    consoleScreen.innerHTML += '<br>';
-    await printContent("Cleaning up",2000);
-    await dots();
-    consoleScreen.innerHTML += '<br>';
+    try {
+        await printContent("Initialising Hacking",1000);
+        await dots();
+        consoleScreen.innerHTML += '<br>'; 
+        await printContent("Reading your files",1000);
+        await dots();
+        consoleScreen.innerHTML += '<br>';
+        await printContent("Password of files Detected",1500);
+        await dots();
+        consoleScreen.innerHTML += '<br>';
+        await printContent("Sending all passwords and personal files to server",1500);
+        await dots();
+        consoleScreen.innerHTML += '<br>';
+        await printContent("Cleaning up",2000);
+        await dots();
+        consoleScreen.innerHTML += '<br>';
+    }catch(err){
+        console.log('error -> ', err);
+    }
+
 });
