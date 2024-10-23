@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return new Promise((resolve) => {
             setTimeout(() => {
                 if (consoleScreen) {
-                    consoleScreen.innerText += `$_> ${content}\n`;
+                    consoleScreen.innerText += `$_> ${content}`;
                 } else {
                     console.error('consoleScreen element not found');
                 }
@@ -68,6 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
         await printContent("Cleaning up", 2000);
         await dots();
         consoleScreen.innerHTML += '<br>';
+        setTimeout(() => {}, 500);
+        window.location.href= './DoneHecking.html'
     });
 
     // Optional: Event listener for the NO button (if needed)
